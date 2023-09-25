@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+<title>Sharon Diskin - Portfolio</title>
+</head>
+
+<body>
+<header>
+    <h1>Sharon Diskin</h1>
+    <h2><b>DevOps Engineer</b></h2>
+    <p class="typing-effect">I'm Sharon, a DevOps Engineer holding a B.Sc in Computer Science, with strong debugging and troubleshooting skills. <br> 
+        I am a Self-motivated autodidact, who constantly seeks opportunities to learn and develop.<br>
+        In my free time, I enjoy skateboarding, playing chess, and delving into the world of stock and economy.</p>
+</header>
+
+<main class="container">
+    <section class="contact">
+        <h2>Contact</h2>
+        <p>
+            <i class="fas fa-phone"></i> +972-508381929  |
+            <a href="mailto:sharon.ad94@gmail.com"><i class="fas fa-envelope"></i> sharon.ad94@gmail.com</a> |
+            <a href="https://linkedin.com/in/sharondiskin" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a> |
+            <a href="https://medium.com/@sharon.ad94" target="_blank"><i class="fab fa-medium-m"></i> Medium</a>
+        </p>
+    </section>
+
+    <section class="experience">
+        <h2>Experience</h2>
+        <div class="job">
+            <h3>DevOps Engineer</h3>
+            <p>CloudBit, 2022 - Present</p>
+        </div>
+        <div class="job">
+            <h3>DevOps Engineer</h3>
+            <p>Cybereason, 2021 - 2022</p>
+        </div>
+        <div class="job">
+            <h3>TechOps Engineer</h3>
+            <p>Cybereason, 2020 - 2021</p>
+        </div>
+    </section>
+    
+
+    <section class="projects">
+        <h2>Projects</h2>
+        
+        <div class="project">
+            <h3>Developed a full CI/CD (Github Actions/Jenkins)</h3>
+            <ul>
+                <li>CI - a workflow that runs tests and builds the images of the application</li>
+                <li>CD - a workflow that deploys all the services (To ECS/EKS/Docker compose on a server)</li>
+                <li>CI/CD Wrapper - a workflow that runs both CI and CD workflows together one after another</li>
+            </ul>
+        </div>
+        
+        <div class="project">
+            <h3>Planned and Automated a Disaster Recovery Plan</h3>
+            <ul>
+                <li>Planned and designed an end-to-end "failover to another region" plan</li>
+                <li>Executed, implemented, and fully automated the entire process</li>
+                <li>Documented the entire process in detail</li>
+            </ul>
+        </div>
+        
+        <div class="project">
+            <h3>Designed and Implemented a K8S Cluster</h3>
+            <ul>
+                <li>Built a full EKS cluster handling aspects such as VPC, security groups, and load balancing.</li>
+                <li>Wrote and managed project configuration using Kustomize for config management.</li>
+                <li>Developed Docker images for all project services</li>
+            </ul>
+        </div>
+        
+        <div class="project">
+            <h3>Implemented a Jenkins Service End to End</h3>
+            <ul>
+                <li>Created a Jenkins service on an EC2 instance with Ubuntu OS</li>
+                <li>Configured the service by adding SSO (Google authentication), installing plugins, integrating external services (e.g. GitHub and Slack), configuring credentials, and creating user groups</li>
+                <li>Secured the service by creating HTTPS access using ALB, creating a DNS for the host, and making it accessible only to VPN</li>
+                <li>Configured workers by creating two worker nodes and configuring the master to access them.</li>
+            </ul>
+        </div>
+    </section>
+    
+
+    <section class="education">
+        <h2>Education</h2>
+        <div class="degree">
+            <strong>Bachelor of Science - B.Sc, Computer Science, 90.4</strong> <br>
+            The Academic College of Tel-Aviv, Yaffo <span class="year">2019-2022</span>
+            <ul class="awards">
+                <li>President's list award 2019-2020</li>
+                <li>Dean’s list award 2020-2021</li>
+                <li>Full first year tuition scholarship for Academic Excellence based on high acceptance rates</li>
+            </ul>
+        </div>
+    </section>
+    
+
+    <section class="skills">
+        <h2>Skills</h2>
+            <strong>Clouds:</strong> AWS, GCP <br>
+            <strong>Operating Systems:</strong> Linux, MacOS, Windows <br>
+            <strong>CI/CD Tools:</strong> Jenkins, Github Actions, Octopus Deploy <br>
+            <strong>Infrastructure-as-Code:</strong> CloudFormation, Terraform <br>
+            <strong>Config Management:</strong> Ansible, Kustomize (For K8S) <br>
+            <strong>Containers/Container Orchestration:</strong> Docker, Docker Compose, K8S, ECS <br>
+            <strong>Programming Languages:</strong> Python, Groovy, Bash, C++, C# <br>
+            <strong>Monitoring Tools:</strong> Datadog, Grafana, Logz.io, New Relic <br>
+            <strong>Databases:</strong> PostgreSQL, MySQL, DynamoDB, MongoDB <br>
+            <strong>Serverless:</strong> AWS Lambda <br>
+            <strong>Version Control:</strong> GitHub, GitLab            
+    </section>
+    
+    <section class="languages">
+        <h2>Languages</h2>
+        <strong>Hebrew: </strong> Native <br>
+        <strong>English: </strong> Fluent
+    </section>
+
+    <hr class="separator" />
+
+    <div class="container-after-separator">
+        <section id="wanna-see-me-dance-section" class="terminal-section">
+            <h2>You wanna see me dance? ツ</h2>
+            <form id="auth-form" onsubmit="event.preventDefault(); validateCredentials(); return false;">
+                <p> sharon@terminal:~$ Ok, if you wanna see me dance, start by generating a password.
+                <br> sharon@terminal:~$ In order to generate a password run ➜ <a href="https://github.com/SharonDiskin/generate-password/actions/workflows/generate-password.yml" target="_blank">this workflow</a>.</p>
+                <label for="username"> <strong> Username: </strong></label>
+                <input type="text" id="username" class="input-field" placeholder="Username" required>
+                <label for="password-1"> <strong>Password: </strong></label>
+                <input type="password" id="password-1" class="input-field" placeholder="Password" required>
+                <button type="submit" class="submit-button">Submit</button>
+            </form>
+        <div id="second-stage" style="display:none;">
+            <p class="typing-effect"> sharon@terminal:~$ So if you really want to see me dance, deep dive inside the docker container in order to solve the riddle that will lead you to the next password.
+            ➜ If you want to find what you need... just go home.
+            ➜ I was pretty lazy when trying to come up with a 4 digits passcode for the first riddle. Can you guess the passcode?
+            </p>
+            <form id="second-form">
+                <label for="password-2"> <strong> Password: </strong></label>
+                <input type="password" id="password-2" class="input-field" placeholder="password" required>
+                <button type="submit" class="submit-button">Submit</button>
+            </form>
+        </div>
+        <div id="last-stage" style="display:none;">
+            <p class="typing-effect"> sharon@terminal:~$ Solve the second-riddle in order to get the last password. 
+            <br> ➜ Again I was pretty lazy when trying to come up with a 4 digits passcode for the first riddle. Can you guess the passcode?
+            </p>
+            <form id="second-form">
+                <label for="password-2"> <strong> Password: </strong></label>
+                <input type="password" id="password-2" class="input-field" placeholder="password" required>
+                <button type="submit" class="submit-button">Submit</button>
+            </form>
+        </div>     
+        </section>    
+    </div>
+
+    
+</main>
+
+<script src="script.js"></script>
+
+</body>
+</html>
+

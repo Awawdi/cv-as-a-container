@@ -1,0 +1,209 @@
+
+.contact a{
+    padding: 5px;
+}
+.contact a:hover {
+    text-decoration: underline; 
+    background-color:#d8cd8f;
+    border-radius: 10px;
+}
+body {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    background-color: #f8f4e9;
+    color: #333;
+    transition: background-color 0.5s, color 0.5s;
+
+}
+header {
+    background-color: #2f343d;
+    color: #f8f9fa;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 5px solid #e6934f;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.container section:hover {
+    transform: translateY(-3px); 
+    box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.1); 
+    background-color: #ece3d3;
+}
+
+.container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.container h2 {
+    border-bottom: 2px solid #f8cda9;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #282c34;
+}
+.container p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+.container .contact p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.container p a {
+    color: #0066cc;
+    text-decoration: none;
+}
+.container p a:hover {
+    text-decoration: underline;
+}
+.container .contact p a i {
+    margin-right: 5px;
+    color: #282c34;
+}
+.container .contact p i {
+    margin-right: 5px;
+    color: #282c34;
+}
+.container section {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+@media (min-width: 600px) {
+    .container {
+        padding: 20px 50px;
+    }
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.dark-mode-toggle {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.typing-effect {
+    visibility: hidden;
+  }
+  
+#wanna-see-me-dance-section {
+    padding: 10px;
+}
+#auth-form {
+    margin-top: 10px;
+}
+
+.input-field {
+    padding: 6px; 
+    margin: 5px 0; 
+    box-sizing: border-box; 
+    border: 2px solid #2f343d; 
+    border-radius: 4px; 
+    outline: none; 
+    transition: border 0.3s ease;
+}
+
+.input-field:focus {
+    border: 1px solid #dfa150; 
+    box-shadow: 0 0 8px #f1b84d; 
+}
+
+/* .submit-button {
+    background-color: #e6934f; 
+    color: white; 
+    padding: 7px 12px; 
+    border: none; 
+    border-radius: 4px; 
+    cursor: pointer; 
+    outline: none; 
+    transition: background-color 0.3s ease; 
+}
+
+.submit-button:hover {
+    background-color: #2f343d; 
+} */
+
+.terminal-section {
+    background-color: #000000 !important; 
+    color: #0F0 !important;
+    font-family: 'Courier New', Courier, monospace !important;
+    padding: 20px !important;
+    border-radius: 5px !important;
+    box-shadow: 0px 4px 6px rgba(0,0,0,0.1) !important;
+}
+
+.terminal-section a {
+    color: #0FF !important;
+    text-decoration: underline !important;
+}
+
+
+.terminal-section a:hover {
+    text-decoration: none !important;
+}
+
+.terminal-section h2 {
+    background-color: #000000 !important; 
+    color: #0F0 !important;
+    padding: 10px !important;
+    margin: 0 !important; 
+    border-bottom: 1px solid #0F0 !important; /* Green bottom border */
+}
+
+.terminal-section label,
+.terminal-section input,
+.terminal-section button {
+    display: block !important;
+    margin: 5px 0 !important;
+}
+
+.terminal-section input,
+.terminal-section button {
+    padding: 10px !important;
+    border: 1px solid #0F0 !important;
+    background-color: #000000 !important;
+    color: #0F0 !important;
+    outline: none !important;
+}
+
+.terminal-section button:hover {
+    background-color: #0F0 !important;
+    color: #000000 !important;
+    cursor: pointer !important;
+}
+
+.submit-button {
+    display: inline-block !important;
+    background-color: #0F0 !important;
+    color: #000000 !important;
+    border: none !important;
+    transition: background-color 0.3s ease, color 0.3s ease !important; 
+}
+
+.submit-button:hover {
+    background-color: #000000 !important;
+    color: #0F0 !important;
+}
+
+.separator {
+    height: 5px; 
+    background-color: #333; 
+}
+
+section {
+    filter: blur(5px);
+    transition: filter 0.5s ease-in-out; 
+    opacity: 0.5; 
+}
+
