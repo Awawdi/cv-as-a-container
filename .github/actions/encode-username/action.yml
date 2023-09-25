@@ -1,0 +1,13 @@
+name: 'Encode username'
+inputs:
+  username:
+    required: true
+outputs:
+  password:
+runs:
+  using: 'composite'
+  steps:
+    - run: echo "password=${{ inputs.username }}" | base64 > ${{ github.workspace }}/encoded.txt
+      shell: bash
+    - run: echo "::set-output name=password::$(cat ${{ github.workspace }}/encoded.txt)"
+      shell: bash
