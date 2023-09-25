@@ -13,9 +13,10 @@
 <header>
     <h1>Sharon Diskin</h1>
     <h2><b>DevOps Engineer</b></h2>
-    <p class="typing-effect">I'm Sharon, a DevOps Engineer holding a B.Sc in Computer Science, with strong debugging and troubleshooting skills. <br> 
-        I am a Self-motivated autodidact, who constantly seeks opportunities to learn and develop.<br>
-        In my free time, I enjoy skateboarding, playing chess, and delving into the world of stock and economy.</p>
+    <p class="typing-effect"> I'm Sharon, a DevOps Engineer holding a B.Sc in Computer Science, with strong debugging and troubleshooting skills.
+        <br> I am a Self-motivated autodidact, who constantly seeks opportunities to learn and develop.
+        <br>In my free time, I enjoy skateboarding, playing chess, and delving into the world of stock and economy.
+    </p>
 </header>
 
 <main class="container">
@@ -127,37 +128,46 @@
 
     <div class="container-after-separator">
         <section id="wanna-see-me-dance-section" class="terminal-section">
-            <h2>You wanna see me dance? ツ</h2>
-            <form id="auth-form" onsubmit="event.preventDefault(); validateCredentials(); return false;">
-                <p> sharon@terminal:~$ Ok, if you wanna see me dance, start by generating a password.
-                <br> sharon@terminal:~$ In order to generate a password run ➜ <a href="https://github.com/SharonDiskin/generate-password/actions/workflows/generate-password.yml" target="_blank">this workflow</a>.</p>
-                <label for="username"> <strong> Username: </strong></label>
-                <input type="text" id="username" class="input-field" placeholder="Username" required>
-                <label for="password-1"> <strong>Password: </strong></label>
-                <input type="password" id="password-1" class="input-field" placeholder="Password" required>
-                <button type="submit" class="submit-button">Submit</button>
-            </form>
-        <div id="second-stage" style="display:none;">
-            <p class="typing-effect"> sharon@terminal:~$ So if you really want to see me dance, deep dive inside the docker container in order to solve the riddle that will lead you to the next password.
-            ➜ If you want to find what you need... just go home.
-            ➜ I was pretty lazy when trying to come up with a 4 digits passcode for the first riddle. Can you guess the passcode?
-            </p>
-            <form id="second-form">
-                <label for="password-2"> <strong> Password: </strong></label>
-                <input type="password" id="password-2" class="input-field" placeholder="password" required>
-                <button type="submit" class="submit-button">Submit</button>
-            </form>
-        </div>
-        <div id="last-stage" style="display:none;">
-            <p class="typing-effect"> sharon@terminal:~$ Solve the second-riddle in order to get the last password. 
-            <br> ➜ Again I was pretty lazy when trying to come up with a 4 digits passcode for the first riddle. Can you guess the passcode?
-            </p>
-            <form id="second-form">
-                <label for="password-2"> <strong> Password: </strong></label>
-                <input type="password" id="password-2" class="input-field" placeholder="password" required>
-                <button type="submit" class="submit-button">Submit</button>
-            </form>
-        </div>     
+            <h2 id="wanna-see-me-dance-heading">You wanna see me dance? ツ</h2>
+            <div id="first-stage" style="display:none;">
+                <p class="typing-effect"> sharon@terminal:~$ Ok, if you wanna see me dance, start by generating a password.
+                <br> sharon@terminal:~$ In order to generate a password run ➜ <a href="https://github.com/SharonDiskin/generate-password/actions/workflows/generate-password.yml" target="_blank">this workflow</a>.
+                </p>
+                <form id="auth-form" onsubmit="event.preventDefault(); validateCredentials(); return false;">
+                    <label for="username"> <strong> Username: </strong></label>
+                    <input type="text" id="username" class="input-field" placeholder="Username" required>
+                    <label for="password-1"> <strong>Password: </strong></label>
+                    <input type="password" id="password-1" class="input-field" placeholder="Password" required>
+                    <button type="submit" class="submit-button">Submit</button>
+                </form>
+            </div>
+            <div id="second-stage" style="display:none;">
+                <p class="typing-effect"> sharon@terminal:~$ So if you really want to see me dance, deep dive inside the docker container in order to solve the riddle that will lead you to the next password.
+                sharon@terminal:~$ Go big or go HOME.
+                sharon@terminal:~$ As for the passcode to the first riddle... I was pretty lazy when trying to come up with a 4 digits passcode for the first riddle. Can you guess the passcode?
+                </p>
+                <form id="second-form">
+                    <label for="password-2"> <strong> Password: </strong></label>
+                    <input type="password" id="password-2" class="input-field" placeholder="password" required>
+                    <button type="submit" class="submit-button">Submit</button>
+                </form>
+            </div>
+            <div id="third-stage" style="display:none;">
+                <p class="typing-effect"> sharon@terminal:~$ Solve the second riddle in order to get the last password.
+                sharon@terminal:~$ Again I was pretty lazy when trying to come up with a 4 digits passcode for the second riddle and I really believe in continuity. Can you guess the passcode this time?
+                </p>
+                <form id="last-form">
+                    <label for="password-3"> <strong> Password: </strong></label>
+                    <input type="password" id="password-3" class="input-field" placeholder="password" required>
+                    <button type="submit" class="submit-button">Submit</button>
+                </form>
+            </div>    
+            <div id="last-stage" style="display:none;">
+                <p class="typing-effect">sharon@terminal:~$ Congratulations on solving all the riddles! While I may not be a dancer, Noa Kirel certainly is. You can check out her moves in the 'Unicorn' video below :)
+                    <br> sharon@terminal:~$ and speaking of unicorns... I believe you aspire for your company to achieve unicorn status one day. Bring me on board, and I will devote myself to helping you achieve this vision.
+                </p>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/r4wbdKmM3bQ?si=YaNHykVhhjfYG7LK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
         </section>    
     </div>
 

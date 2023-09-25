@@ -1,38 +1,21 @@
 document.addEventListener('DOMContentLoaded', () => {
-    let elements = document.querySelectorAll('.typing-effect');
     let sections = document.querySelectorAll('section');
-    let totalCharacters = 0;
 
-    elements.forEach(el => {
-        totalCharacters += el.textContent.length;
-        el.setAttribute('data-content', el.textContent);
-        el.textContent = '';
-    });
-
-    let overallIndex = 0;
-
-    function type() {
-        let secondStage = document.getElementById('second-stage');
-        if (window.getComputedStyle(secondStage, null).display === 'none') {
-            requestAnimationFrame(type); // If second stage is not visible, try again in the next frame
-            return;
-        }
-    
+    function type(element) {
+        let content = element.getAttribute('data-content');
+        let index = 0;
         let speed = Math.floor(Math.random() * (100 - 30 + 1) + 30);
-        setTimeout(() => {
-            for (let el of elements) {
-                let content = el.getAttribute('data-content');
-                if (content && overallIndex < content.length) {
-                    if (overallIndex === 0) el.style.visibility = 'visible'; // Make the element visible only when starting to type
-                    el.textContent += content[overallIndex];
-                }
+        element.style.visibility = 'visible';
+        
+        function typing() {
+            if (index < content.length) {
+                element.textContent += content[index];
+                index++;
+                setTimeout(typing, speed);
             }
-            overallIndex++;
-            if (overallIndex < totalCharacters) {
-                requestAnimationFrame(type);
-            }
-        }, speed);
-    }      
+        }
+        typing();
+    }
 
     function validateCredentials() {
         const username = document.getElementById('username').value;
@@ -40,7 +23,12 @@ document.addEventListener('DOMContentLoaded', () => {
         let encodedUsername = btoa(username);
 
         if (password === encodedUsername) {
-            document.getElementById('second-stage').style.display = 'block';
+            let secondStageElement = document.getElementById('second-stage');
+            secondStageElement.style.display = 'block';
+            let typingElement = secondStageElement.querySelector('.typing-effect');
+            typingElement.setAttribute('data-content', typingElement.textContent);
+            typingElement.textContent = '';
+            type(typingElement);
         } else {
             alert('Incorrect Username or Password!');
         }
@@ -49,22 +37,59 @@ document.addEventListener('DOMContentLoaded', () => {
     function validateSecondPassword() {
         const password2 = document.getElementById('password-2').value;
         let secondPassword = '427437419382427408';
+
         if (password2 === secondPassword) {
-            document.getElementById('last-stage').style.display = 'block';
+            let lastStageElement = document.getElementById('third-stage');
+            lastStageElement.style.display = 'block';
+            let typingElement = lastStageElement.querySelector('.typing-effect');
+            typingElement.setAttribute('data-content', typingElement.textContent);
+            typingElement.textContent = '';
+            type(typingElement);
         } else {
             alert('Incorrect Second Password!');
         }
     }
 
-    window.validateCredentials = validateCredentials; // Expose validateCredentials to global scope to be accessed from HTML inline script
+    function validateThirdPassword() {
+        const password3 = document.getElementById('password-3').value;
+        let thirdPassword = '1234';
+    
+        if (password3 === thirdPassword) {
+            let lastStageElement = document.getElementById('last-stage');
+            lastStageElement.style.display = 'block';
+            let typingElements = lastStageElement.querySelectorAll('.typing-effect');
+            typingElements.forEach(element => {
+                element.setAttribute('data-content', element.textContent);
+                element.textContent = '';
+                type(element);
+            });
+        } else {
+            alert('Incorrect Third Password!');
+        }
+    }
 
-    // Add submit event listener to the second-form to validate the second password.
+    window.validateCredentials = validateCredentials;
+    
+    // document.getElementById('waana-see-me-dance-heading').addEventListener('click', function(){
+    //     let firstStageElement = document.getElementById('first-stage');
+    //     firstStageElement.style.display = 'block';
+        
+    //     let typingElement = firstStageElement.querySelector('.typing-effect');
+    //     typingElement.setAttribute('data-content', typingElement.textContent);
+    //     typingElement.textContent = '';
+    //     type(typingElement);
+    // });
+    
     document.getElementById('second-form').addEventListener('submit', function (event) {
-        event.preventDefault(); // Prevent default form submission
-        validateSecondPassword(); // Call the validation function for the second password.
+        event.preventDefault();
+        validateSecondPassword();
     });
 
-    // Intersection Observer for scroll effect
+    document.getElementById('last-form').addEventListener('submit', function (event) {
+        event.preventDefault();
+        validateThirdPassword();
+    });
+
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -81,5 +106,8 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(section);
     });
 
-    type();
+    let headerElement = document.querySelector('header .typing-effect');
+    headerElement.setAttribute('data-content', headerElement.textContent);
+    headerElement.textContent = '';
+    type(headerElement);
 });
