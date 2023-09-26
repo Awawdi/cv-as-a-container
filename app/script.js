@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function type(element) {
         let content = element.getAttribute('data-content');
         let index = 0;
-        let speed = Math.floor(Math.random() * (100 - 30 + 1) + 30);
+        let speed = Math.floor(Math.random() * (40) + 30);
         element.style.visibility = 'visible';
     
         function typing() {
@@ -79,6 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
         typingElement.setAttribute('data-content', typingElement.textContent);
         typingElement.textContent = '';
         type(typingElement);
+        this.style.pointerEvents = 'none';
     });
     
     document.getElementById('second-form').addEventListener('submit', function (event) {
