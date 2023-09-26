@@ -6,16 +6,17 @@ document.addEventListener('DOMContentLoaded', () => {
         let index = 0;
         let speed = Math.floor(Math.random() * (100 - 30 + 1) + 30);
         element.style.visibility = 'visible';
-        
+    
         function typing() {
             if (index < content.length) {
-                element.textContent += content[index];
+                // Append characters one by one
+                element.innerHTML += content[index]; 
                 index++;
                 setTimeout(typing, speed);
             }
         }
         typing();
-    }
+    }    
 
     function validateCredentials() {
         const username = document.getElementById('username').value;
