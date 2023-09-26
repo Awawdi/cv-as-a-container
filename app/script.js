@@ -70,15 +70,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.validateCredentials = validateCredentials;
     
-    // document.getElementById('waana-see-me-dance-heading').addEventListener('click', function(){
-    //     let firstStageElement = document.getElementById('first-stage');
-    //     firstStageElement.style.display = 'block';
+    document.getElementById('wanna-see-me-dance-heading').addEventListener('click', function(){
+        let firstStageElement = document.getElementById('first-stage');
+        firstStageElement.style.display = 'block';
         
-    //     let typingElement = firstStageElement.querySelector('.typing-effect');
-    //     typingElement.setAttribute('data-content', typingElement.textContent);
-    //     typingElement.textContent = '';
-    //     type(typingElement);
-    // });
+        let typingElement = firstStageElement.querySelector('.typing-effect');
+        typingElement.setAttribute('data-content', typingElement.textContent);
+        typingElement.textContent = '';
+        type(typingElement);
+    });
     
     document.getElementById('second-form').addEventListener('submit', function (event) {
         event.preventDefault();
