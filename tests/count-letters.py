@@ -1,10 +1,10 @@
 import json
 
 # Initialize the count dictionary
-count = {"s": 0, "h": 0, "a": 0, "r": 0, "o": 0, "n": 0}
+count = {"n": 0, "o": 0, "a": 0, "k": 0, "i": 0, "r": 0, "e": 0, "l": 0}
 
 # Open the input file and read line by line
-filename = 'riddle-1/riddle-file.txt'
+filename = 'app/riddle-1/riddle-file.txt'
 with open(filename, 'r') as file:
     for line in file:
         for char in line.strip():  # Remove the newline character at the end of the line

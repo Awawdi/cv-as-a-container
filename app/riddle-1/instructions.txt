@@ -1,11 +1,13 @@
 Hello and welcome to riddle-1!
-In the riddle-file you have a random text composed of the letters 's', 'h', 'a', 'r', 'o', 'n'
+In the riddle-file you have a random text composed of the letters 'n', 'o', 'a', 'k', 'i', 'r', 'e', 'l'
 count how many times each letter appears, the next passcode is the concatenation of the number of appearnce of each letter.
 for example, if:
-'s' appears 3 times
-'h' appears 20 times
+'n' appears 3 times
+'o' appears 20 times
 'a' appears 9 times
-'r' appear 31 times
-'o' appears 0 times
-'n' appears 5 times
-then the passcode will be: 32093105
+'k' appear 31 times
+'i' appears 0 times
+'r' appears 5 times
+'e' appears 2 times
+'l' appears 4 times
+then the passcode will be: 3209310524

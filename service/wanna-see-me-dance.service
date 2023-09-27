@@ -1,0 +1,11 @@
+[Unit]
+Description=Wanna See Me Dance Logging Agent
+After=network.target
+
+[Service]
+ExecStart=/usr/local/bin/wanna-see-me-dance.sh
+Restart=on-failure
+User=root
+
+[Install]
+WantedBy=default.target

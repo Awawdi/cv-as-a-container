@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function validateSecondPassword() {
         const password2 = document.getElementById('password-2').value;
-        let secondPassword = '427437419382427408';
+        let secondPassword = '307318274332313297324335';
 
         if (password2 === secondPassword) {
             let lastStageElement = document.getElementById('third-stage');
@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function validateThirdPassword() {
         const password3 = document.getElementById('password-3').value;
-        let thirdPassword = '1234';
+        let thirdPassword = 'unicorn';
     
         if (password3 === thirdPassword) {
             let lastStageElement = document.getElementById('last-stage');
