@@ -1,0 +1,3 @@
+why use ENV DEBIAN_FRONTEND=noninteractive?
+https://www.cyberciti.biz/faq/explain-debian_frontend-apt-get-variable-for-ubuntu-debian/
+
