@@ -1,10 +1,28 @@
 pipeline {
-  agent none
-  stages {     
-    stage('Docker Build') {
-      steps {
-        sh 'docker build -t orsanaw/cv-as-a-cont:latest .'
+  environment {
+    imagename = "orsanaw/orsan-cv-as-a-container"
+    registryCredential = 'dockerhub'
+    dockerImage = ''
+  }
+  agent any
+  stages {
+    stage('Building image') {
+      steps{
+        script {
+          dockerImage = docker.build imagename
+        }
       }
     }
-   }
- }
+    stage('Deploy Image') {
+      steps{
+        script {
+          docker.withRegistry( '', registryCredential ) {
+            dockerImage.push("$BUILD_NUMBER")
+             dockerImage.push('latest')
+
+          }
+        }
+      }
+    }
+  }
+}
