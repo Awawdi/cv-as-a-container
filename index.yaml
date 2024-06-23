@@ -1,0 +1,17 @@
+apiVersion: v1
+entries:
+  orsan-cv:
+  - apiVersion: v2
+    appVersion: v2
+    created: "2024-06-23T12:50:21.791529097+03:00"
+    description: A Helm chart for deploying orsan-cv as a containerized application
+    digest: d7eda3fe75372c4f0adfd9a9fd260f43f5389d93595922709eb20a298a180067
+    maintainers:
+    - email: orsan.awawdi@gmail.com
+      name: Orsan
+    name: orsan-cv
+    type: application
+    urls:
+    - https://github.com/Awawdi/webapp.git/orsan-cv-1.0.0.tgz
+    version: 1.0.0
+generated: "2024-06-23T12:50:21.79104007+03:00"
